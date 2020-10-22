@@ -37,5 +37,5 @@ FileUtils.rm_f Dir.glob '*.pdf'
 system "pdflatex --jobname=andy-preston-cv-#{option} \"#{latexCommand}\""
 
 %w[aux out log].each do |suffix|
-    FileUtils.rm_f Dir.glob "*#{suffix}"
+    FileUtils.rm_f Dir.glob "*.#{suffix}"
 end
