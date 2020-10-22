@@ -1,0 +1,298 @@
+% name-and-address.tex should just contain plain text with name and address
+\topHeading{\input{name-and-address.tex}}
+
+\firstLine{Date of Birth: 1 April 1966}{\jobType}
+
+\sectionHeading{Profile}
+
+Highly experienced full-stack developer.
+I've been using PHP for almost as long as it's existed
+and have carried my OOP skills over from something like 20 years
+of use in other languages.
+In the last few years moving from plain PHP to MVC frameworks
+including Symfony, YII, Laravel (and Ruby on Rails).
+I can write complex, optimised and readable SQL queries
+as well as using ORM database access included in many frameworks.
+
+\ifnum\areEqual{\jobType}{PHP}
+    My strengths certainly lie on the server side
+    but I am also quite capable with browser side
+    technologies like HTML, CSS, JS, and AJAX.
+    And with the HTTP protocol that ties the two sides together.
+\fi
+
+\ifnum\areEqual{\jobType}{JS}
+    I've been using JavaScript more and more since a combination
+    of JQuery and Douglas Crockford showed me it's real power
+    and have been trying to incorporate more of it into our
+    server-side projects as well as just using it in the browser.
+\fi
+
+\ifnum\areEqual{\jobType}{Ruby}
+    Due to job availability, I have done far more of my server-side work
+    using PHP but Ruby remains my preferred language
+    and Rails my preferred framework.
+    As well as using Rails when working at Oxford University,
+    I also spent my time at Inzent using YII (a "port" of Rails for PHP).
+\fi
+
+\ifnum\areEqual{\jobType}{Admin}
+    Having been on both the technical and administrative sides on
+    "the information business" for 35-odd years,
+    I am able to bring my previous experience to bear and to adapt
+    to new systems and methodologies.
+    Whilst aiming to complete tasks in a timely manner,
+    I always try to focus on clarity,
+    being aware that others are going to build on my work
+    and are going to need to understand what I've done
+    without that being a task within itself.
+\else
+    I've not got a degree but I feel that my 30-odd years of
+    experience in a wide range of software development roles
+    more than makes up for this.
+\fi
+
+\sectionHeading{Employment}
+
+\jobHeading
+    {OSX Limited (Full Stack Developer)}
+    {March 2015 - 8 August 2020}
+
+Various development and maintenance tasks including:
+\begin{itemize}
+    \item A system to handle the complete workflow for a company sourcing accommodation for insurance claimants together with a responsive customer portal.
+    \item Custom content management systems for customer websites with portals to handle appointments, quotations, and payments and maintenance of content for same.
+    \item A system to handle the workflow for cardiology research.
+    \item A system to "intelligently" create rotas for a care-provider agency.
+    \item A system to allow searching facilities for national and local government based contract proposals.
+\end{itemize}
+
+Client-server architectures with both
+internal (JSON) and external (JSON and XML) RESTful APIs.
+
+Documentation using Confluence. Issue handling and breaking down
+of customer requirements using Jira. Version control using Git/Bitbucket.
+
+Handling of user documentation and data in Word, Excel and PDF formats.
+
+% !!!!! Low level Doctrine and Symfony Handlers !!!!!
+
+\ifnum\areEqual{\jobType}{JS}
+    OSX viewed JS as mostly a browser side technology
+    but I was keen to make more uses of it on the server side as well.
+    We used Grunt and Webpack to bundle our project assets.
+    My main project included a websocks client and server
+    for keeping track of which users were currently logged in
+    and also included an end-to-end test suite
+    using the TestCafe framework.
+\fi
+
+\ifnum\areEqual{\jobType}{PHP}
+    Using mainly PHP/Symfony but with other front and back end tools:
+    MySQL, NodeJS, Test Cafe, Bootstrap, Less and Sass,
+    Polymer web components, JQuery, Grunt, Webpack, Composer,
+    Doctrine, Optaplanner, Docker.
+    Website security auditing using OWASP's Zed Attack Proxy.
+\fi
+
+\jobHeading
+    {Oxford University Ecosystem Laboratory (Short Term Contract)}
+    {January - February 20151}
+
+Developing a \boldIf{\jobType}{Ruby}{Ruby on Rails}
+system to import spreadsheets into a PostgreSQL database.
+Documentation and further development of the database.
+Using RSPEC for unit testing / test driven development.
+
+\jobHeading
+    {Inzent Limited (Developer)}
+    {June - September 2014}
+
+Developing an existing PHP/YII back-end to an
+E. commerce system connecting to a PHP/Laravel front-end using JSON.
+Using MySQL, SQLite, and Memcache,
+generating SOAP and REST queries to affiliate APIs,
+responding to REST queries from the front-end.
+Implementing a better search back-end using ElasticSearch.
+Android development for a proof-of-concept mobile app.
+Git and Bitbucket version control.
+
+\jobHeading
+    {Mathembedded Limited, Bristol (Web Developer / Systems Administrator)}
+    {November 2011 - March 2014}
+
+Part of a team, developing the PHP/JQuery AJAX UI
+for a testing application with PDF report generation,
+design of a very large MySQL database
+and construction of complex optimised SQL queries.
+Creation of \boldIf{\jobType}{Ruby}{Ruby} scripts
+to parse SQL queries for insertion into the database.
+Devops with Bamboo CI server.
+Technical and user documentation in Confluence.
+Security testing using Zed Attack Proxy.
+Working with the project manager in an Agile/Scrum environment
+using git and Stash version control and Jira issue tracking.
+Also acting in something of a mentoring role
+because of my central role of integrating the UI,
+database and lower-level C code.
+
+PHP/JQuery Set-top box streaming video demo for
+The International Broadcasting Convention.
+
+Maintenance of IT infrastructure:
+configuration of Cent-OS for internal application hosting,
+reverse proxying, wildcard SSL certificates
+and upkeep of the Joomla website
+and previously mentioned web-applications.
+
+\jobHeading
+    {Augustus Marketing (Web Development Contract)}
+    {March - June 2011}
+
+Creating HTML and CSS from provided assets,
+developing PHP for site frameworks and E. commerce,
+integrating managed content into Flash.
+Wordpress integration.
+SOAP and REST APIs.
+Video production and photography.
+
+\jobHeading
+    {Andy Preston Consultancy / Edge Effect (Self Employed Sole Trader)}
+    {2001 - 2011}
+
+Web sites, frameworks and CMSs, Interactive,
+E. commerce and data gathering sites
+with PHP (and a little Python), XML and JQuery.
+Using YouTube, Picasa, and Blogger APIs.
+Production of audiovisual material
+(with scripting done with The Python Imaging Library),
+creating multi-media systems.
+Simple electronics systems for integration into
+sculptures and art installations.
+
+Business admin, accounts, invoicing, preparation of
+marketing materials, etc.
+
+I also contributed to and, later, led development
+of SpiralSynthModular an Open Source audio processing application,
+using C++.
+
+\jobHeading
+    {Artsite Limited (Financial Director, IT / Event Organiser)}
+    {2008 - 2011}
+
+Maintaining the website; IT procedures; graphic design; event coordination;
+production of video for conferences, presentations and the BBC Big Screen.
+
+Preparing memorandum and articles of association;
+liaison with bank, Companies House, HMRC and Charities Commission;
+accounting procedures; and determining legal requirements.
+
+\jobHeading
+    {Apollo Developments (Self Employed Sole Trader)}
+    {1996 - 2001}
+
+Developing Windows software using Delphi:
+order-processing, a printer driver, multimedia, staff development.
+
+\jobHeading
+    {Atek Trading Limited (Visual Basic Programmer)}
+    {1995}
+
+Although I was employed as a programmer,
+I actually spent my time building and integrating PCs.
+
+\jobHeading
+    {Total Mailing Services (Data Conversion Programmer)}
+    {1994}
+
+Developing one-off programs converting data to a suitable format for printing.
+
+\jobHeading
+    {British Rail South Western Region (General Admin)}
+    {1994}
+
+Transferring costing information to Excel - data entry and VBA programming.
+
+\jobHeading
+    {(Self Employed Sole Trader)}
+    {1992 - 1993}
+
+Developing a graphic library for Clipper in C
+with transparent access to different screen resolutions.
+
+\jobHeading
+    {Kode Computers Limited - Service Division (Programmer)}
+    {1990 - 1992}
+
+Developing extensions to service management
+and stock control system using
+Sculptor 4GL (an "old school" DSL) on Unix,
+automation for BOS accounts,
+diagnostic software,
+systems admin and procedures.
+
+\jobHeading
+    {Kode Computers Limited - Systems Division (Programmer)}
+    {1989 - 1990}
+
+Developing reports on BOS accounting / SOP system
+using a query based report generator. General systems admin.
+
+\jobHeading
+    {New Careers Training (DTP Operator)}
+    {1988 - 1989}
+
+Preparing course notes and other documents
+using a word processor and Ventura Publisher.
+
+\jobHeading
+    {Temple Records Limited ("Computer Wizz Kid")}
+    {1987 - 1988}
+
+Maintaining an obsolete CP/M machine and administering a mailing database.
+
+\jobHeading
+    {Pentagram Software (Self employed partnership)}
+    {1986 - 1987}
+
+Creating presentation software on the BBC Micro and Amiga
+using teletext and graphics.
+
+\jobHeading
+    {Swindon Sewage Treatment Works (Programmer)}
+    {1985 - 1986}
+
+Developing software for process control and scientific data management
+on BBC Microcomputers.
+
+\sectionHeading{Education}
+
+\subHeading{Hreod Burna Secondary School, Swindon}
+
+\begin{description}
+    \item[1982] 'O' Level: Biology - B
+    \item[1982] CSE: Computer Studies - 1, Mathematics - 2,
+        Chemistry - 2, Electronics - 3
+    \item[1983] 'O' Level: English Language - C, Sociology - C
+    \item[1983] CSE: Geology - 2, English Language - 1
+    \item[1983] CEE: English and Business Communications - III
+\end{description}
+
+\subHeading{The College, Swindon}
+
+\begin{description}
+    \item[1986] B/TEC Diploma: Computer Studies - Distinction
+\end{description}
+
+\sectionHeading{Spare Time Activities}
+
+Weekends find me either making electronic music videos
+or out in the shed tinkering with metalwork and electronics.
+Some of my hobby projects are hosted on Gitlab.
+
+\sectionHeading{References}
+
+% Just include the names and addresses of referees in plain text
+% in references.tex
+\input {references.tex}
