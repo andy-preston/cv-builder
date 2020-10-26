@@ -24,7 +24,7 @@
 \usepackage{xcolor}
 \definecolor{headingBlue}{RGB}{0, 0, 80}
 
-\newcommand\areEqual[2]{\pdfstrcmp{#1}{#2}=0}
+\newcommand\areEqual[2]{\pdfmatch{#2}{#1}=1}
 
 \newcommand\boldIf[3]{\ifnum\areEqual{#1}{#2}\textbf{#3}\else#3\fi}
 
