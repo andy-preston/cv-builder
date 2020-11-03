@@ -30,17 +30,17 @@
 
 \newcommand{\firstLine}[2]{#1\hfill Ref: \today{} \currenttime{} #2}
 
-\newcommand{\subHeading}[1]{\textbf{#1}}
-
 \newcommand{\sectionHeading}[1]{
     \noindent\colorbox{headingBlue}{
         \strut\makebox[\dimexpr \linewidth-4\fboxsep][l]{
             \color{white}
-            \subHeading{#1}
+            \textbf{#1}
         }
     }
 }
 
-\newcommand{\topHeading}[1]{\begin{center}\subHeading{#1}\end{center}}
+\newcommand{\topHeading}[1]{\begin{center}\textbf{#1}\end{center}}
+
+\newcommand{\subHeading}[1]{\color{headingBlue}\textbf{#1}\color{black}}
 
 \newcommand{\jobHeading}[2]{\subHeading{#1}\\\subHeading{#2}}
