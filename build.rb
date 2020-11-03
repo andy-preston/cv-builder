@@ -21,7 +21,6 @@ else
         'php' => 'PHP',
         'js' => 'JS',
         'ruby' => 'Ruby',
-        'perl' => 'Perl',
     }.fetch option
 end
 
