@@ -2,7 +2,10 @@
 *.aux
 *.log
 *.pdf
+*.doc
+*.docx
 *.out
 *.tex
+old/*
 !cv.tex
 !template.tex
