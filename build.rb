@@ -20,7 +20,7 @@ else
     jobType = {
         'php' => 'PHP',
         'js' => 'JS',
-        'ruby' => 'Ruby',
+        'ruby' => 'Ruby'
     }.fetch option
 end
 
