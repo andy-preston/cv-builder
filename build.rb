@@ -19,6 +19,7 @@ else
     template = 'template.tex'
     jobType = {
         'php' => 'PHP',
+        'pyphp' => 'PHP/Python',
         'js' => 'JS',
         'ruby' => 'Ruby'
     }.fetch option
