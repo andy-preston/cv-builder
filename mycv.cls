@@ -24,9 +24,9 @@
 \usepackage{xcolor}
 \definecolor{headingBlue}{RGB}{0, 0, 80}
 
-\newcommand\areEqual[2]{\pdfmatch{#2}{#1}=1}
+\newcommand\matches[2]{\pdfmatch{#2}{#1}=1}
 
-\newcommand\boldIf[3]{\ifnum\areEqual{#1}{#2}\textbf{#3}\else#3\fi}
+\newcommand\boldIf[3]{\ifnum\matches{#1}{#2}\textbf{#3}\else#3\fi}
 
 \newcommand{\firstLine}[2]{#1\hfill Ref: \today{} \currenttime{} #2}
 

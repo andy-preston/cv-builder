@@ -10,7 +10,7 @@ and have carried my OOP skills over from nearly 30 years
 of use in other languages.
 In the last few years moving from plain PHP to MVC frameworks
 like Symfony, YII, Laravel
-\ifnum\areEqual{\jobType}{Ruby}
+\ifnum\matches{Ruby}{\jobType}
 and \textbf{Ruby on Rails}.
 \else
 (and Ruby on Rails).
@@ -19,20 +19,20 @@ and \textbf{Ruby on Rails}.
 I can write complex, optimised and readable SQL queries
 as well as using the ORMs included in many frameworks.
 
-\ifnum\areEqual{\jobType}{PHP}
+\ifnum\matches{PHP}{\jobType}
     My strengths certainly lie on the server side
     but I am also quite capable with browser side
     technologies like HTML, CSS, JS, and AJAX.
     And with the HTTP protocol that ties the two sides together.
 \fi
 
-\ifnum\areEqual{\jobType}{JS}
+\ifnum\matches{JS}{\jobType}
     I've been using JavaScript more and more since Douglas Crockford
     showed me it's real power and have been incorporating more of it
     into server-side projects as well as just using it in the browser.
 \fi
 
-\ifnum\areEqual{\jobType}{Ruby}
+\ifnum\matches{Ruby}{\jobType}
     Due to job availability, I have done far more of my server-side work
     using PHP but Ruby remains my preferred language
     and Rails my preferred framework.
@@ -40,7 +40,7 @@ as well as using the ORMs included in many frameworks.
     I also spent my time at Inzent using YII (a "port" of Rails for PHP).
 \fi
 
-\ifnum\areEqual{\jobType}{Admin}
+\ifnum\matches{Admin}{\jobType}
     Having been on both the technical and administrative sides on
     "the information business" for 35-odd years,
     I am able to bring my previous experience to bear and to adapt
@@ -88,7 +88,7 @@ Handling of user documentation and data in Word, Excel and PDF formats.
 
 % !!!!! Low level Doctrine and Symfony Handlers !!!!!
 
-\ifnum\areEqual{\jobType}{JS}
+\ifnum\matches{JS}{\jobType}
     OSX viewed JS as mostly a browser side technology
     but I was keen to make more uses of it on the server side as well.
     We used Grunt and Webpack to bundle our project assets.
@@ -108,7 +108,7 @@ Handling of user documentation and data in Word, Excel and PDF formats.
     {Oxford University Ecosystem Laboratory (Short Term Contract)}
     {January - February 20151}
 
-Developing a \boldIf{\jobType}{Ruby}{Ruby on Rails}
+Developing a \boldIf{Ruby}{\jobType}{Ruby on Rails}
 system to import spreadsheets into a PostgreSQL database.
 Documentation and further development of the database.
 Using rspec for unit testing / test driven development.
@@ -133,7 +133,7 @@ Part of a team, developing the PHP/JQuery AJAX UI
 for a testing application with PDF report generation,
 design of a very large MySQL database
 and construction of complex optimised SQL queries.
-Creation of \boldIf{\jobType}{Ruby}{Ruby} scripts
+Creation of \boldIf{Ruby}{\jobType}{Ruby} scripts
 to parse SQL queries for insertion into the database.
 Devops with Bamboo CI server.
 Technical and user documentation in Confluence.
@@ -172,7 +172,7 @@ Web sites, frameworks and CMSs, Interactive, E. commerce and
 data gathering sites with PHP and some Python, XML and JQuery.
 Using YouTube, Picasa, and Blogger APIs.
 Development of multi-media systems, production of audiovisual
-material\ifnum\areEqual{\jobType}{Python}
+material\ifnum\matches{Python}{\jobType}
     (with scripting done with The Python Imaging Library)
 \fi.
 
