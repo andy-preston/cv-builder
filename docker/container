@@ -1,0 +1,50 @@
+#!/bin/bash
+
+CONT_NAME='ruby-cv'
+RUN_NAME="run-${CONT_NAME}"
+TTY='--tty'
+
+case $1 in
+'shell')
+    TASK='shell'
+    COMMAND='bash'
+    ;;
+'rubocop')
+    TASK='shell'
+    TTY=''
+    COMMAND="rubocop ${@:2}"
+    ;;
+'build')
+    TASK='shell'
+    COMMAND="ruby ./build.ry ${@:2}"
+    ;;
+*)
+    TASK=$1
+    ;;
+esac
+
+case $TASK in
+'run')
+    docker build --tag ${CONT_NAME} $(dirname $0)
+
+    docker run \
+        --rm --interactive ${TTY} \
+        --user $(id -u):$(id -g) \
+        --volume $(pwd):/usr/local/src \
+        --name ${RUN_NAME} \
+        ${CONT_NAME} bash
+    ;;
+'shell')
+    docker container exec \
+        --interactive ${TTY} \
+        ${RUN_NAME} ${COMMAND}
+
+    rm -rf .cache
+    ;;
+*)
+    echo "run from the project working directory"
+    echo "../docker/container run        {start container}"
+    echo "../docker/container shell      {bash}"
+    echo "../docker/container rubocop    {rubocop}"
+    ;;
+esac
