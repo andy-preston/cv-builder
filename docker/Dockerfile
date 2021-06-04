@@ -1,6 +1,15 @@
-FROM ruby:2.7
+FROM ruby:2.7-slim
 ENV TERM=linux
 ENV DEBIAN_FRONTEND=noninteractive
-ENV HOME=/usr/local/src
 WORKDIR /usr/local/src
-RUN gem install rubocop
+
+RUN apt-get update && \
+    apt-get -y upgrade && \
+    apt-get -y --no-install-recommends install \
+        texlive-fonts-recommended \
+        texlive-latex-base \
+        texlive-latex-extra && \
+    apt-get -y --purge autoremove && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* && \
+    gem install rubocop
