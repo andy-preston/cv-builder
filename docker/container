@@ -2,26 +2,28 @@
 
 CONT_NAME='ruby-cv'
 RUN_NAME="run-${CONT_NAME}"
-TTY='--tty'
 
-case $1 in
-'shell')
-    TASK='shell'
-    COMMAND='bash'
-    ;;
-'rubocop')
+if [[ $(basename $0) == 'rubocop' ]]
+then
     TASK='shell'
     TTY=''
     COMMAND="rubocop ${@:2}"
-    ;;
-'build')
-    TASK='shell'
-    COMMAND="ruby ./build.ry ${@:2}"
-    ;;
-*)
-    TASK=$1
-    ;;
-esac
+else
+    TTY='--tty'
+    case $1 in
+    'shell')
+        TASK='shell'
+        COMMAND='bash'
+        ;;
+    'build')
+        TASK='shell'
+        COMMAND="ruby ./build.rb ${@:2}"
+        ;;
+    *)
+        TASK=$1
+        ;;
+    esac
+fi
 
 case $TASK in
 'run')
