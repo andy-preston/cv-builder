@@ -16,6 +16,9 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{4pt}
 
+\usepackage{enumitem}
+\setlist{itemsep=-1pt, topsep=-8pt,after=\vspace{\baselineskip}}
+
 \usepackage{datetime}
 \ddmmyyyydate
 \newtimeformat{mytime}{\twodigit{\THEHOUR}:\twodigit{\THEMINUTE}}
@@ -37,6 +40,7 @@
             \textbf{#1}
         }
     }
+    \vspace{-8pt}
 }
 
 \newcommand{\topHeading}[1]{\begin{center}\textbf{#1}\end{center}}
