@@ -1,0 +1,29 @@
+#!/bin/bash
+
+CONT_NAME='cv-build'
+RUN_NAME="run-${CONT_NAME}"
+
+case $1 in
+'shell')
+    COMMAND='bash'
+    ;;
+'build')
+    # TODO: parameter here instead of PHP
+    COMMAND="pdflatex --jobname=andy-preston-cv-php \newcommand{\jobType}{php}\input{template.tex}"
+    ;;
+*)
+    COMMAND=$1
+    ;;
+esac
+
+docker build --tag ${CONT_NAME} $(dirname $0)/docker
+
+docker run \
+    --rm --interactive --tty \
+    --user $(id -u):$(id -g) \
+    --volume $(pwd):/usr/local/src \
+    --name ${RUN_NAME} \
+    ${CONT_NAME} ${COMMAND}
+
+rm *.out *.aux *.log
+

@@ -1,4 +1,4 @@
-FROM ruby:2.7-slim
+FROM ubuntu:bionic
 ENV TERM=linux
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /usr/local/src
@@ -11,5 +11,4 @@ RUN apt-get update && \
         texlive-latex-extra && \
     apt-get -y --purge autoremove && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* && \
-    gem install rubocop
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
